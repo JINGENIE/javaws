@@ -7,7 +7,6 @@ public class Ws {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		while(true) {
-	//true �� �Լ� �ݺ��϶�� ��	
 			System.out.println("Input Command[q,a1,a2,a3,a4]");
 			String cmd = sc.next();
 			if(cmd.equals("q")) {
@@ -36,6 +35,7 @@ public class Ws {
 				//1~9까지의 랜덤한 숫자를 배열에 넣는다.
 				//배열 정보를 출력 한다.
 				//짝수 값만의 합과 평균을 출력 한다.
+				
 			}else if(cmd.equals("a4")){
 				//5~9까지의 숫자를 2개 입력 받는다.
 				//2차원 배열을 만든다.
