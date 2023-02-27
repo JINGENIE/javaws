@@ -106,13 +106,42 @@ public class Ws {
 				avg = (sum * 1.0) / cnt;
 				System.out.printf("sum : %d, avg : %.2f\n", sum, avg);
 				
-			}else if(cmd.equals("a4")){
-				//5~9까지의 숫자를 2개 입력 받는다.
-				//2차원 배열을 만든다.
-				//1~9까지의 랜덤한 숫자를 배열에 넣는다.
-				//배열 정보를 출력 한다
-				//배열의 합과 평균을 출력 한다.
-			}
+			} else if (cmd.equals("a4")) {
+				// 5~9까지의 숫자를 2개 입력 받는다.
+				// 2차원 배열을 만든다.
+				// 1~9까지의 랜덤한 숫자를 배열에 넣는다.
+				// 배열 정보를 출력 한다
+				// 배열의 합과 평균을 출력 한다.
+
+				// (1) Random 숫자 2차원 배열에 입력 - size를 결정함 (a * b 사이즈의 행렬)
+				Random k = new Random();
+				int a = k.nextInt(5) + 5;
+				int b = k.nextInt(5) + 5;
+				int arr[][] = new int[a][b];
+				
+				// (2) 위에서 정해진 a*b 사이즈의 행렬에 Random한 숫자 입력
+				Random r = new Random();
+				for (int i = 0; i < arr.length; i++) { // Random한 숫자를 2차원 배열에 입력
+					for (int j = 0; j < arr[i].length; j++) {
+						arr[i][j] = r.nextInt(9) + 1;
+					}
+				}
+				// (3) 전체 배열의 합계와 평균 계산
+				int sum = 0;
+				int cnt = 0;
+				double avr = 0.0;
+				for (int i = 0; i < arr.length; i++) { // Start of Outer For
+					for (int j = 0; j < arr[i].length; j++) { // Start of Inner for
+						System.out.printf("%d\t", arr[i][j]);
+						sum += arr[i][j];
+						cnt++;
+					} // Start of Inner for
+					System.out.println("");
+				} // End of Outer For
+				avr = (double) sum / cnt;
+				System.out.printf("A4_행의 수(검증 5~9) : %d\nA4_열의 수(검증 5~9) : %d\nA4_전체 요소의 합계 : %d\nA4_전체 요소의 평균 : %4.2f\n", a, b, sum, avr);
+				break;
+			} // End of "a4"
 
 			 else {
 				System.out.println("Invalid command");
