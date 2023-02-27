@@ -8,18 +8,19 @@ public class Ws {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		while(true) {
+		while (true) {
 			System.out.println("Input Command[q,a1,a2,a3,a4]");
 			String cmd = sc.next();
-			if(cmd.equals("q")) {
+			if (cmd.equals("q")) {
 				System.out.println("QUIT");
 				break;
-			}else if(cmd.equals("a1")) {
-				//5~9까지의 숫자를 입력 받는다.
-				//입력받은 숫자만큼 배열을 생성하고
-				//1~9까지의 랜덤한 숫자를 배열에 넣는다.
-				//배열 정보를 출력 한다.
-				//합과 평균을 출력 한다.
+			} else if (cmd.equals("a1")) {
+				// 5~9까지의 숫자를 입력 받는다.
+				// 입력받은 숫자만큼 배열을 생성하고
+				// 1~9까지의 랜덤한 숫자를 배열에 넣는다.
+				// 배열 정보를 출력 한다.
+				// 합과 평균을 출력 한다.
+
 				Scanner sc1 = new Scanner(System.in);
 				System.out.print("5~9 까지 숫자 중 하나를 입력해주세요: ");
 				int number = sc1.nextInt();
@@ -43,8 +44,7 @@ public class Ws {
 
 				System.out.printf("%d, %4.2f \t" , sum, avg);
 
-			
-			}else if(cmd.equals("a2")){
+			} else if (cmd.equals("a2")) {
 				//5~9까지의 숫자를 입력 받는다.
 				Scanner scA2 = new Scanner(System.in);
 				System.out.println("5~9 사이의 숫자를 입력해주세요.");
@@ -74,14 +74,13 @@ public class Ws {
 				avg = (sum*1.0)/cnt;
 				System.out.printf("sum: %d, avg: %4.2f", sum, avg);
 
-				
-			}else if(cmd.equals("a3")){
 
-				//5~9까지의 숫자를 입력 받는다.
-				//입력받은 숫자만큼 배열을 생성하고
-				//1~9까지의 랜덤한 숫자를 배열에 넣는다.
-				//배열 정보를 출력 한다.
-				//짝수 값만의 합과 평균을 출력 한다.
+			} else if (cmd.equals("a3")) {
+				// 5~9까지의 숫자를 입력 받는다.
+				// 입력받은 숫자만큼 배열을 생성하고
+				// 1~9까지의 랜덤한 숫자를 배열에 넣는다.
+				// 배열 정보를 출력 한다.
+				// 짝수 값만의 합과 평균을 출력 한다.
 				
 				System.out.println("5~9사이의 숫자를 입력하세요");
 				int a3cmd = sc.nextInt();
@@ -105,8 +104,8 @@ public class Ws {
 				}
 				avg = (sum * 1.0) / cnt;
 				System.out.printf("sum : %d, avg : %.2f\n", sum, avg);
-				
-			} else if (cmd.equals("a4")) {
+
+			}  else if (cmd.equals("a4")) {
 				// 5~9까지의 숫자를 2개 입력 받는다.
 				// 2차원 배열을 만든다.
 				// 1~9까지의 랜덤한 숫자를 배열에 넣는다.
@@ -143,16 +142,14 @@ public class Ws {
 				break;
 			} // End of "a4"
 
-			 else {
+			else {
 				System.out.println("Invalid command");
 				System.out.println("Try agin");
-				
+
 			}
-		}//end while
+		} // end while
 		System.out.println("BYE...");
 		sc.close();
-		
-
 
 	}
 
